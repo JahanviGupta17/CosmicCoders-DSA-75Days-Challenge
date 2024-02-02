@@ -1,0 +1,35 @@
+## Q3: Increment Large Integer
+
+You are given a large integer represented as an integer array `digits`, where each `digits[i]` is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+Increment the large integer by one and return the resulting array of digits.
+
+:: Solution
+
+```python
+from typing import List
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        n = len(digits)
+
+        for i in range(n - 1, -1, -1):
+            digits[i] += 1
+
+            if digits[i] == 10:
+                digits[i] = 0
+            else:
+                return digits
+
+        digits.insert(0, 1)
+        return digits
+
+:: Approach
+
+Iterate through the digits array from right to left.
+Increment each digit by one and handle carry if needed.
+If no carry is left after iterating, insert 1 at the beginning of the array.
+:: Complexity
+
+Time Complexity: O(n) - Linear time complexity.
+Space Complexity: O(1) - Constant space complexity.
