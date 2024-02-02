@@ -1,0 +1,28 @@
+## Q4: Move Zeros to the End
+
+Given an integer array `nums`, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+Note that you must do this in-place without making a copy of the array.
+
+:: Solution
+
+```python
+from typing import List
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        non_zero = 0
+
+        for i in range(len(nums)):
+            if nums[i] != 0 and nums[non_zero] == 0:
+                nums[i], nums[non_zero] = nums[non_zero], nums[i]
+                non_zero += 1
+:: Approach
+
+Initialize a pointer non_zero to keep track of the position where the next non-zero element should be placed.
+Iterate through the array, and when a non-zero element is found, swap it with the element at the non_zero position.
+Move the non_zero pointer to the next position.
+:: Complexity
+
+Time Complexity: O(n) - Linear time complexity.
+Space Complexity: O(1) - Constant space complexity.
