@@ -1,0 +1,40 @@
+## Q2: Max Profit from Stock Prices
+
+You are given an array `prices` where `prices[i]` is the price of a given stock on the ith day.
+
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+:: Solution
+
+```python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        left = 0
+        right = 1
+        maximum_profit = 0
+
+        while right < len(prices):
+            current_profit = prices[right] - prices[left]
+
+            if prices[left] < prices[right]:
+                maximum_profit = max(current_profit, maximum_profit)
+            else:
+                left = right
+
+            right += 1
+
+        return maximum_profit
+
+:: Approach
+
+Initialize left and right pointers to track the buying and selling days.
+Initialize maximum_profit to 0.
+Iterate through the array to calculate the profit on each day.
+Update maximum_profit when a better selling day is found.
+Move the left pointer to the buying day if a better buying day is found.
+:: Complexity
+
+Time Complexity: O(n) - Linear time complexity.
+Space Complexity: O(1) - Constant space complexity.
