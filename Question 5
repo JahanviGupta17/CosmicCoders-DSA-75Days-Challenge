@@ -1,0 +1,23 @@
+## Q5: Squares of a Sorted Array
+
+Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+:: Solution
+
+```python
+from typing import List
+
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        for i in range(len(nums)):
+            nums[i] = nums[i] * nums[i]
+        nums.sort()
+        return nums
+:: Approach
+
+Iterate through the array and square each element in place.
+Sort the squared array in non-decreasing order.
+:: Complexity
+
+Time Complexity: O(n log n) - Sorting operation dominates.
+Space Complexity: O(1) - Constant space complexity (in-place sorting).
