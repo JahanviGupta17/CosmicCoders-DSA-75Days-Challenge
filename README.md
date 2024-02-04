@@ -19,10 +19,29 @@ Throughout this journey, I have learned the importance of consistency. Daily pra
 
 ### Daily Questions
 
-- Day 1: [https://leetcode.com/problems/two-sum/]
-- Day 2: [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/]
-- Day 3: [https://leetcode.com/problems/plus-one/]
-- Day 4: [https://leetcode.com/problems/move-zeroes/]
+- Day 1:
+- [https://leetcode.com/problems/two-sum/]
+- [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/]
+- [https://leetcode.com/problems/plus-one/]
+- [https://leetcode.com/problems/move-zeroes/]
+- Day 2:
+-  [https://leetcode.com/problems/squares-of-a-sorted-array/description/]
+-  [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/]
+-  [https://leetcode.com/problems/find-pivot-index/description/]
+-  [https://leetcode.com/problems/majority-element/description/]
+- Day 3:
+-  [https://leetcode.com/problems/pascals-triangle/description/]
+-  [https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/]
+-  [https://leetcode.com/problems/merge-intervals/description/]
+-  [https://leetcode.com/problems/3sum/description/]
+-  Day 4:
+-  [https://leetcode.com/problems/insert-delete-getrandom-o1/]
+-  [https://leetcode.com/problems/subarray-sum-equals-k/]
+-  [https://leetcode.com/problems/next-permutation/]
+-  [https://leetcode.com/problems/container-with-most-water/]
+- 
+- 
+- 
 
 I will be updating a new problem daily, and I encourage you to join me on this journey of continuous learning.
 My Leetcode Profile: [https://leetcode.com/JahanviGupta/]
