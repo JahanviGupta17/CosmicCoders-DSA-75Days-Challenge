@@ -1,6 +1,8 @@
-## Q9: Squares of a Sorted Array
+## Q9: Pascal's Triangle
 
-Given an integer array `nums` sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+Given an integer `numRows`, return the first `numRows` of Pascal's triangle.
+
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 
 :: Solution
 
@@ -8,16 +10,24 @@ Given an integer array `nums` sorted in non-decreasing order, return an array of
 from typing import List
 
 class Solution:
-    def sortedSquares(self, nums: List[int]) -> List[int]:
-        for i in range(len(nums)):
-            nums[i] = nums[i] * nums[i]
-        nums.sort()
-        return nums
+    def generate(self, numRows: int) -> List[List[int]]:
+        triangle = []
+
+        for i in range(numRows):
+            row = [1] * (i + 1)
+            
+            for j in range(1, i):
+                row[j] = triangle[i-1][j-1] + triangle[i-1][j]
+
+            triangle.append(row)
+            
+        return triangle
 :: Approach
 
-Iterate through the array and square each element in place.
-Sort the squared array in non-decreasing order.
+Initialize an empty list triangle to store rows of Pascal's triangle.
+Iterate through each row, starting from the second row.
+For each element in the row, calculate the sum of the two numbers directly above it.
 :: Complexity
 
-Time Complexity: O(n log n) - Sorting operation dominates.
-Space Complexity: O(1) - Constant space complexity (in-place sorting).
+Time Complexity: O(numRows^2) - Quadratic time complexity.
+Space Complexity: O(numRows^2) - Quadratic space complexity due to the storage of the entire triangle.
